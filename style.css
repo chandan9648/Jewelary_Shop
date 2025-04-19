@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  header {
+    background-color: #f5426c;
+    font-family:Helvetica;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction:row;
+  }
+
+  .marquee-container {
+    flex: 2;
+    overflow: hidden;
+    background: #fdf6f0;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .marquee {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+
+  .marquee img {
+    width: 200px;
+    height: 200px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .chat-container {
+    flex: 1;
+    background: #e1e1e0;
+    border-left: 2px solid #abaeab;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .chat-box {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #edf4e8;
+  }
+
+  .chat-input {
+    display: flex;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+  }
+
+  .chat-input button {
+    padding: 10px;
+    background: #f5c542;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+
+    .marquee-container, .chat-container {
+      flex: none;
+      width: 100%;
+      height: 50vh;
+    }
+
+    .chat-container {
+      border-left: none;
+      border-top: 2px solid #ccc;
+    }
+
+    .marquee img {
+      width: 150px;
+      height: 150px;
+      margin: 0 10px;
+    }
+  }
