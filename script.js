@@ -4,7 +4,7 @@ function sendMessage() {
     if (input.value.trim() !== "") {
       const message = document.createElement("div");
       message.innerHTML = `<strong>You:</strong> ${input.value}`;
-      chatBox.appendChild(message);
+      chatBox.appendChild(message); 
       input.value = "";
       chatBox.scrollTop = chatBox.scrollHeight;
     }
