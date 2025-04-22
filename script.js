@@ -7,5 +7,5 @@ function sendMessage() {
       chatBox.appendChild(message); 
       input.value = "";
       chatBox.scrollTop = chatBox.scrollHeight;  
-    }
+    }  
   }
